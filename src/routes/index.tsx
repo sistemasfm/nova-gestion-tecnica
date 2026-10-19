@@ -35,6 +35,19 @@ const problems = [
   { icon: ClipboardCheck, text: "Contratar un consultor por cada área — seguridad, calidad, ambiente, gestión industrial — significa coordinar cuatro proveedores distintos para un mismo problema, y seguir sin nadie que se haga cargo de que la solución realmente funcione." },
 ];
 
+const teamMembers = [
+  {
+    name: "Alejandro",
+    role: "Lic. en Administración de Empresas",
+    quote: "“Ordenamos la gestión para que el cumplimiento técnico y normativo se integre de forma eficiente en los procesos de la empresa, sin frenar la operación diaria.”",
+  },
+  {
+    name: "Paula",
+    role: "Ingeniera Química",
+    quote: "“Aportamos rigor técnico en planta: evaluamos riesgos reales de seguridad y ambiente para implementar soluciones concretas que funcionen en el terreno, no solo papeles.”",
+  },
+];
+
 const faqs = [
   ["¿Cómo confío en un servicio nuevo, sin referencias?", "El diagnóstico técnico inicial es gratuito y sin compromiso: podés evaluar cómo trabajamos antes de decidir cualquier cosa. Además, no entregamos solo documentos: nos quedamos hasta que la solución está implementada y tu equipo capacitado para sostenerla."],
   ["Esto es un gasto que ahora mismo no puedo justificar.", "Lo que no se invierte en prevenir termina pagándose después, multiplicado: una sanción, un accidente o un contrato perdido cuestan más que resolver el requisito a tiempo. El diagnóstico inicial te muestra exactamente dónde estás parado, sin costo, antes de tomar cualquier decisión."],
@@ -168,7 +181,25 @@ function Index() {
 
       <section className="bg-canvas px-5 py-20 sm:px-8 lg:py-28">
         <Reveal className="mx-auto max-w-6xl"><div className="mb-12"><p className="text-xs font-bold uppercase text-cta">Credenciales del equipo</p><h2 className="mt-3 font-display text-3xl font-bold text-technical sm:text-5xl">Dos miradas. Una gestión integral.</h2></div>
-          <div className="-mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-4 md:mx-0 md:grid md:grid-cols-2 md:gap-5 md:overflow-visible md:px-0 md:pb-0" aria-label="Credenciales del equipo, deslizá para ver más">{["Alejandro", "Paula"].map((name, index) => <article key={name} className="flex min-h-64 w-[85%] shrink-0 snap-center flex-col justify-between rounded-md md:w-auto border border-technical/15 bg-background p-7 sm:p-9"><div className="flex items-center gap-5"><div className="grid size-20 shrink-0 place-items-center rounded-full bg-technical font-display text-2xl font-bold text-technical-foreground">{name[0]}</div><div><h3 className="font-display text-2xl font-bold text-technical">{name}</h3><p className="mt-1 text-sm font-semibold uppercase text-cta">Equipo NOVA</p></div></div><blockquote className="mt-8 border-l-2 border-cta pl-5 text-lg leading-[1.7] text-technical">“Gestión técnica integral: diagnóstico, solución e implementación real, no solo papeles.”</blockquote><span className="mt-8 font-display text-xs font-bold text-technical/40">0{index + 1}</span></article>)}</div>
+          <div className="-mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-4 md:mx-0 md:grid md:grid-cols-2 md:gap-5 md:overflow-visible md:px-0 md:pb-0" aria-label="Credenciales del equipo, deslizá para ver más">
+            {teamMembers.map((member, index) => (
+              <article key={member.name} className="flex min-h-64 w-[85%] shrink-0 snap-center flex-col justify-between rounded-md border border-technical/15 bg-background p-7 md:w-auto sm:p-9">
+                <div className="flex items-center gap-5">
+                  <div className="grid size-20 shrink-0 place-items-center rounded-full bg-technical font-display text-2xl font-bold text-technical-foreground">
+                    {member.name[0]}
+                  </div>
+                  <div>
+                    <h3 className="font-display text-2xl font-bold text-technical">{member.name}</h3>
+                    <p className="mt-1 text-sm font-semibold uppercase text-cta">{member.role}</p>
+                  </div>
+                </div>
+                <blockquote className="mt-8 border-l-2 border-cta pl-5 text-lg leading-[1.7] text-technical">
+                  {member.quote}
+                </blockquote>
+                <span className="mt-8 font-display text-xs font-bold text-technical/40">0{index + 1}</span>
+              </article>
+            ))}
+          </div>
         </Reveal>
       </section>
 

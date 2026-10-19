@@ -77,11 +77,6 @@ export function LegalShell({ title, intro, sections, crossLink, updatedAt }: Leg
           ))}
         </div>
 
-        {/* Nota al pie obligatoria */}
-        <p className="mt-14 border-l-4 border-cta bg-white p-5 text-sm leading-relaxed text-technical/70">
-          Este texto es un punto de partida — consultalo con tu asesor legal antes de publicarlo.
-        </p>
-
         {/* Enlace cruzado */}
         <p className="mt-10 text-base">
           <Link
