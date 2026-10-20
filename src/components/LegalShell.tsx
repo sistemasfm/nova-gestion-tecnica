@@ -22,8 +22,9 @@ export function LegalShell({ title, intro, sections, crossLink, updatedAt }: Leg
       {/* Header mínimo */}
       <header className="border-b border-technical/10 bg-white">
         <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-3 px-5 py-5 sm:px-8">
-          <Link to="/" className="font-display text-lg font-bold tracking-tight">
-            NOVA Gestión Técnica
+          <Link to="/" className="flex items-center gap-3 font-display text-xl font-bold tracking-tight text-technical">
+            <img src="/favicon.svg" alt="NOVA" width={36} height={36} className="size-9 shrink-0 rounded-lg shadow-sm" />
+            <span>NOVA <span className="font-sans text-xs font-semibold uppercase text-technical/70">Gestión Técnica</span></span>
           </Link>
           <Link
             to="/"

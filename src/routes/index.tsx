@@ -153,7 +153,23 @@ function Index() {
         <picture><source media="(max-width: 767px)" srcSet={heroMobile} /><img src={heroImage} alt="Especialista técnica revisando una instalación eléctrica industrial" width={1920} height={1080} fetchPriority="high" decoding="async" className="absolute inset-0 h-full w-full object-cover object-center md:object-[62%_center]" /></picture>
         <div className="absolute inset-0 bg-technical/72 md:bg-gradient-to-r md:from-technical md:via-technical/88 md:to-technical/20" />
         <div className="relative mx-auto w-full max-w-7xl px-5 py-10 sm:px-8 lg:px-12">
-          <div className="mb-9 flex items-center gap-3 font-display text-lg font-bold"><span className="grid size-9 place-items-center border border-technical-foreground/40">N</span>NOVA <span className="font-sans text-xs font-semibold uppercase text-technical-foreground/70">Gestión Técnica</span></div>
+          <div className="mb-8 flex items-center gap-4 sm:gap-5">
+            <img
+              src="/favicon.svg"
+              alt="NOVA Gestión Técnica"
+              width={72}
+              height={72}
+              className="size-14 sm:size-16 lg:size-18 shrink-0 rounded-2xl border border-white/15 shadow-xl"
+            />
+            <div className="flex flex-col justify-center">
+              <span className="font-display text-3xl font-extrabold leading-none tracking-tight text-white sm:text-5xl lg:text-6xl">
+                NOVA
+              </span>
+              <span className="mt-1 font-sans text-xs font-bold uppercase tracking-[0.22em] text-cta sm:text-sm lg:text-base">
+                Gestión Técnica
+              </span>
+            </div>
+          </div>
           <div className="max-w-4xl">
             <p className="mb-4 text-xs font-bold uppercase text-cta sm:text-sm">Seguridad · Calidad · Ambiente · Gestión industrial</p>
             <h1 className="font-display text-[2.25rem] font-bold uppercase leading-[1.04] sm:text-5xl lg:text-7xl"><span className="md:block">Un solo equipo técnico </span><span className="md:block">para cumplir con todo</span></h1>
