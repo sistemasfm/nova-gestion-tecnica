@@ -150,12 +150,12 @@ function Index() {
   const scrollTo = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "center" });
   return (
     <main className="overflow-hidden bg-background">
-      <section className="relative flex min-h-[100svh] items-center bg-technical text-technical-foreground">
+      <section className="relative flex min-h-[100svh] items-start pt-6 sm:items-center sm:pt-0 bg-technical text-technical-foreground">
         <picture><source media="(max-width: 767px)" srcSet={heroMobile} /><img src={heroImage} alt="Especialista técnica revisando una instalación eléctrica industrial" width={1920} height={1080} fetchPriority="high" decoding="async" className="absolute inset-0 h-full w-full object-cover object-center md:object-[62%_center]" /></picture>
         <div className="absolute inset-0 bg-technical/72 md:bg-gradient-to-r md:from-technical md:via-technical/88 md:to-technical/20" />
-        <div className="relative mx-auto w-full max-w-7xl px-5 py-12 sm:px-8 lg:px-12">
+        <div className="relative mx-auto w-full max-w-7xl px-5 pt-3 pb-12 sm:px-8 sm:py-12 lg:px-12">
           {/* Logo oficial centrado y protagonista */}
-          <div className="mb-10 flex justify-center text-center sm:mb-14">
+          <div className="mb-5 flex justify-center text-center sm:mb-14">
             <img
               src={novaLogoOfficial}
               alt="NOVA Gestión Técnica"
