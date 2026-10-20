@@ -201,9 +201,9 @@ function Index() {
 
       <section className="bg-canvas px-5 py-20 sm:px-8 lg:py-28">
         <Reveal className="mx-auto max-w-6xl"><div className="mb-12"><p className="text-xs font-bold uppercase text-cta">Credenciales del equipo</p><h2 className="mt-3 font-display text-3xl font-bold text-technical sm:text-5xl">Dos miradas. Una gestión integral.</h2></div>
-          <div className="-mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-4 md:mx-0 md:grid md:grid-cols-2 md:gap-5 md:overflow-visible md:px-0 md:pb-0" aria-label="Credenciales del equipo, deslizá para ver más">
+          <div className="grid gap-5 md:grid-cols-2">
             {teamMembers.map((member, index) => (
-              <article key={member.name} className="flex min-h-64 w-[85%] shrink-0 snap-center flex-col justify-between rounded-md border border-technical/15 bg-background p-7 md:w-auto sm:p-9">
+              <article key={member.name} className="flex min-h-64 w-full flex-col justify-between rounded-md border border-technical/15 bg-background p-7 sm:p-9">
                 <div className="flex items-center gap-5">
                   <div className="grid size-20 shrink-0 place-items-center rounded-full bg-technical font-display text-2xl font-bold text-technical-foreground">
                     {member.name[0]}
