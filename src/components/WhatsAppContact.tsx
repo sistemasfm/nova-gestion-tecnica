@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { X } from "lucide-react";
 import { WHATSAPP_MESSAGE, WhatsAppIcon, waHrefFor } from "@/lib/whatsapp";
+import novaSymbol from "@/assets/nova-symbol-official.png";
 
 const waHref = waHrefFor(WHATSAPP_MESSAGE);
 
@@ -25,9 +26,9 @@ export function WhatsAppContact() {
       {showBubble && (
         <div className="pointer-events-auto w-[min(19rem,calc(100vw-2rem))] rounded-md border border-technical/15 bg-background p-4 shadow-xl">
           <div className="flex items-start gap-3">
-            <span className="grid size-10 shrink-0 place-items-center rounded-full bg-technical font-display text-xs font-bold text-technical-foreground">
-              NGT
-            </span>
+            <div className="grid size-10 shrink-0 place-items-center overflow-hidden rounded-full bg-technical p-1.5 shadow-sm">
+              <img src={novaSymbol} alt="NOVA" className="h-full w-full object-contain" />
+            </div>
             <p className="pt-0.5 text-base leading-relaxed text-technical">
               Hola 👋 ¿Tenés dudas sobre el diagnóstico técnico sin cargo?
             </p>

@@ -9,6 +9,7 @@ import heroImage from "@/assets/nova-hero.webp";
 import heroMobile from "@/assets/nova-hero-mobile.webp";
 import implementationImage from "@/assets/nova-implementation.webp";
 import finalImage from "@/assets/nova-final.webp";
+import novaLogoOfficial from "@/assets/nova-logo-official.png";
 import { LeadPopup, markLeadSubmitted } from "@/components/LeadPopup";
 import { WhatsAppContact } from "@/components/WhatsAppContact";
 import { submitLeadToEmail } from "@/lib/lead-submission";
@@ -153,25 +154,22 @@ function Index() {
         <picture><source media="(max-width: 767px)" srcSet={heroMobile} /><img src={heroImage} alt="Especialista técnica revisando una instalación eléctrica industrial" width={1920} height={1080} fetchPriority="high" decoding="async" className="absolute inset-0 h-full w-full object-cover object-center md:object-[62%_center]" /></picture>
         <div className="absolute inset-0 bg-technical/72 md:bg-gradient-to-r md:from-technical md:via-technical/88 md:to-technical/20" />
         <div className="relative mx-auto w-full max-w-7xl px-5 py-10 sm:px-8 lg:px-12">
-          <div className="mb-8 flex items-center gap-4 sm:gap-5">
+          <div className="mb-8 flex flex-col items-start gap-3">
             <img
-              src="/favicon.svg"
+              src={novaLogoOfficial}
               alt="NOVA Gestión Técnica"
-              width={72}
-              height={72}
-              className="size-14 sm:size-16 lg:size-18 shrink-0 rounded-2xl border border-white/15 shadow-xl"
+              width={460}
+              height={120}
+              className="h-14 sm:h-20 lg:h-24 w-auto object-contain drop-shadow-lg"
             />
-            <div className="flex flex-col justify-center">
-              <span className="font-display text-3xl font-extrabold leading-none tracking-tight text-white sm:text-5xl lg:text-6xl">
-                NOVA
-              </span>
-              <span className="mt-1 font-sans text-xs font-bold uppercase tracking-[0.22em] text-cta sm:text-sm lg:text-base">
-                Gestión Técnica
-              </span>
-            </div>
+            <p className="font-sans text-xs sm:text-sm font-semibold tracking-wider text-technical-foreground/85">
+              Normativa · Técnica · Gestión — <span className="text-cta font-bold">En una sola solución</span>
+            </p>
           </div>
           <div className="max-w-4xl">
-            <p className="mb-4 text-xs font-bold uppercase text-cta sm:text-sm">Seguridad · Calidad · Ambiente · Gestión industrial</p>
+            <p className="mb-4 text-xs font-bold uppercase tracking-wider text-cta sm:text-sm">
+              Asesoría · Implementación · Capacitación · Gestión
+            </p>
             <h1 className="font-display text-[2.25rem] font-bold uppercase leading-[1.04] sm:text-5xl lg:text-7xl"><span className="md:block">Un solo equipo técnico </span><span className="md:block">para cumplir con todo</span></h1>
             <p className="mt-6 max-w-2xl text-base leading-[1.7] text-technical-foreground/85 sm:text-xl">Diagnosticamos, resolvemos e implementamos seguridad, calidad, ambiente y gestión industrial — en Villa María y en toda la Argentina.</p>
             <Button onClick={() => scrollTo("diagnostico")} variant="cta" size="cta" id="hero-cta" className="hero-pulse mt-8 w-full sm:w-auto">Pedí tu diagnóstico sin cargo <ChevronRight /></Button>
