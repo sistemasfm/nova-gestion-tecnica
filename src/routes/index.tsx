@@ -153,26 +153,32 @@ function Index() {
       <section className="relative flex min-h-[100svh] items-center bg-technical text-technical-foreground">
         <picture><source media="(max-width: 767px)" srcSet={heroMobile} /><img src={heroImage} alt="Especialista técnica revisando una instalación eléctrica industrial" width={1920} height={1080} fetchPriority="high" decoding="async" className="absolute inset-0 h-full w-full object-cover object-center md:object-[62%_center]" /></picture>
         <div className="absolute inset-0 bg-technical/72 md:bg-gradient-to-r md:from-technical md:via-technical/88 md:to-technical/20" />
-        <div className="relative mx-auto w-full max-w-7xl px-5 py-10 sm:px-8 lg:px-12">
-          <div className="mb-8 flex flex-col items-start gap-3">
+        <div className="relative mx-auto w-full max-w-7xl px-5 py-12 sm:px-8 lg:px-12">
+          {/* Logo oficial con protagonismo principal */}
+          <div className="mb-10 sm:mb-12">
             <img
               src={novaLogoOfficial}
               alt="NOVA Gestión Técnica"
-              width={460}
-              height={120}
-              className="h-14 sm:h-20 lg:h-24 w-auto object-contain drop-shadow-lg"
+              width={540}
+              height={140}
+              className="h-20 sm:h-28 lg:h-36 w-auto max-w-full object-contain drop-shadow-xl"
             />
-            <p className="font-sans text-xs sm:text-sm font-semibold tracking-wider text-technical-foreground/85">
-              Normativa · Técnica · Gestión — <span className="text-cta font-bold">En una sola solución</span>
-            </p>
           </div>
-          <div className="max-w-4xl">
-            <p className="mb-4 text-xs font-bold uppercase tracking-wider text-cta sm:text-sm">
-              Asesoría · Implementación · Capacitación · Gestión
+
+          <div className="max-w-3xl">
+            <p className="mb-4 text-xs font-bold uppercase tracking-[0.22em] text-cta sm:text-sm">
+              Normativa · Técnica · Gestión — En una sola solución
             </p>
-            <h1 className="font-display text-[2.25rem] font-bold uppercase leading-[1.04] sm:text-5xl lg:text-7xl"><span className="md:block">Un solo equipo técnico </span><span className="md:block">para cumplir con todo</span></h1>
-            <p className="mt-6 max-w-2xl text-base leading-[1.7] text-technical-foreground/85 sm:text-xl">Diagnosticamos, resolvemos e implementamos seguridad, calidad, ambiente y gestión industrial — en Villa María y en toda la Argentina.</p>
-            <Button onClick={() => scrollTo("diagnostico")} variant="cta" size="cta" id="hero-cta" className="hero-pulse mt-8 w-full sm:w-auto">Pedí tu diagnóstico sin cargo <ChevronRight /></Button>
+            <h1 className="font-display text-2xl font-bold uppercase leading-[1.12] sm:text-4xl lg:text-5xl text-white">
+              <span className="md:block">Un solo equipo técnico </span>
+              <span className="md:block">para cumplir con todo</span>
+            </h1>
+            <p className="mt-5 max-w-2xl text-base leading-[1.7] text-technical-foreground/85 sm:text-lg">
+              Diagnosticamos, resolvemos e implementamos seguridad, calidad, ambiente y gestión industrial — en Villa María y en toda la Argentina.
+            </p>
+            <Button onClick={() => scrollTo("diagnostico")} variant="cta" size="cta" id="hero-cta" className="hero-pulse mt-8 w-full sm:w-auto">
+              Pedí tu diagnóstico sin cargo <ChevronRight />
+            </Button>
           </div>
         </div>
       </section>
